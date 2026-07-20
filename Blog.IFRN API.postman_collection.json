@@ -1,0 +1,222 @@
+{
+  "info": {
+    "_postman_id": "9ec8e2e6-47bc-46dd-9d73-5a79f8887d93",
+    "name": "Blog.IFRN API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56728687",
+    "_collection_link": "https://go.postman.co/collection/56728687-9ec8e2e6-47bc-46dd-9d73-5a79f8887d93?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "getPosts",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "postPosts",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Post de teste via Postman\",\r\n  \"descricao\": \"Testando o endpoint de criação\",\r\n  \"conteudo\": \"Conteúdo de teste para validar o POST.\",\r\n  \"autor\": \"Seu Nome\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getNewPosts",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "putPosts",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Post de teste ATUALIZADO\",\r\n  \"descricao\": \"Descrição atualizada\",\r\n  \"conteudo\": \"Conteúdo atualizado.\",\r\n  \"autor\": \"Luiz\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getComments",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/posts/2/comentarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "2",
+            "comentarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "postComments",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Fulano de Tal\",\r\n  \"texto\": \"Comentário de teste via Postman\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts/6/comentarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "6",
+            "comentarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "getNewComments",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"nome\": \"Fulano de Tal\",\r\n  \"texto\": \"Comentário de teste via Postman\"\r\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/posts/6/comentarios",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "6",
+            "comentarios"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deleteComments",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/comentarios/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "comentarios",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "deletePosts",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/posts/6",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "posts",
+            "6"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
